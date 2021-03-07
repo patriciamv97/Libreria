@@ -90,7 +90,8 @@ public class MisMetodos {
             System.out.println(ele);
         }
     }
-    public static boolean respuestaSiNo(String resposta){
+    public static boolean respuestaSiNo(String mensaxe){
+        String resposta=pedirString(mensaxe);
         if (resposta.equalsIgnoreCase("si")){
             return true ;
         }
