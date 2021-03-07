@@ -3,16 +3,19 @@ package metodos;
 import javax.swing.*;
 
 public class MisMetodos {
-    public static void mostrarPorConsola(String mensaxe){
+    public static void mostrarPorConsola(String mensaxe) {
         System.out.println(mensaxe);
     }
-    public static String pedirString(String mensaxe){
+
+    public static String pedirString(String mensaxe) {
         return JOptionPane.showInputDialog(mensaxe);
     }
-    public static float pedirFloat(String mensaxe){
+
+    public static float pedirFloat(String mensaxe) {
         return Float.parseFloat(JOptionPane.showInputDialog(mensaxe));
     }
-    public static int pedirInt(String mensaxe){
+
+    public static int pedirInt(String mensaxe) {
         return Integer.parseInt(JOptionPane.showInputDialog(mensaxe));
     }
 
@@ -30,10 +33,7 @@ public class MisMetodos {
         return Float.parseFloat(JOptionPane.showInputDialog(mensaxe));
     }
 
-    public static int escollerOpcion(String mensaxe) {
 
-        return  Integer.parseInt(JOptionPane.showInputDialog(mensaxe));
-    }
 
     public static float obterAreaCuadrado() {
         int num = Integer.parseInt(JOptionPane.showInputDialog("Introduce o lado do cadrado"));
@@ -65,27 +65,37 @@ public class MisMetodos {
         return dato;
     }
 
-    public static float[] crearArrayFloat(float[]array,String mensaxe){
-        for (int i=0;i<array.length;i++){
-            array[i]=pedirFloat(mensaxe);
+    public static float[] crearArrayFloat(float[] array, String mensaxe) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = pedirFloat(mensaxe);
         }
         return array;
     }
-    public static void amosarFloat(float[]array){
-        for (Float ele: array){
-            System.out.println(ele);
-        }
-    }
-    public static int[] crearArrayInt(int[]array,String mensaxe){
-        for (int i=0;i<array.length;i++){
-            array[i]=pedirInt(mensaxe);
-        }
-        return array;
-    }
-    public static void amosarInt(int[]array){
-        for (Integer ele: array){
+
+    public static void amosarFloat(float[] array) {
+        for (Float ele : array) {
             System.out.println(ele);
         }
     }
 
+    public static int[] crearArrayInt(int[] array, String mensaxe) {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = pedirInt(mensaxe);
+        }
+        return array;
+    }
+
+    public static void amosarInt(int[] array) {
+        for (Integer ele : array) {
+            System.out.println(ele);
+        }
+    }
+    public static boolean respuestaSiNo(String resposta){
+        if (resposta.equalsIgnoreCase("si")){
+            return true ;
+        }
+       else
+            return false;
+
+        }
 }
